@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link id="style" rel="stylesheet" href="primary.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main id="root">
+    <!-- Profile box -->
+    <div id="profile">
+      <!-- Avatar section -->
+      <div class="avatar">
+        <img src="avatar.gif">
+      </div>
+      <!-- Info section -->
+      <div class="info">
+        <h1>xbrcvar</h1>
+        <button onclick="setState()">change</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const setState = () => {
+      const element = document.getElementById('style')
+
+      element.href = element.href.split('/').pop() === 'primary.css' ? 'secondary.css' : 'primary.css'
+    }
+  </script>
+</body>
+
+</html>
